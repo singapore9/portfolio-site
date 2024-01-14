@@ -20,6 +20,7 @@
 		</p>
 		<p class="note">My GitHub account: <a target='_blank' style="color: white; text-decoration: underline;" href="{GitHubLink}">@{GitHubUsername}</a></p>
 
+<!--		TODO: should be something like a filter: for keyWords, technologies, etc-->
 		{#each projects as project}
 			<ProjectComponent {project} />
 		{/each}

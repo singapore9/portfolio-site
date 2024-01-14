@@ -40,6 +40,8 @@ $ npm install
 $ npm run dev
 ```
 
+[//]: # (TODO: add linters on pre-commit)
+
 ## Authors ❤️
 
 - Andrei - https://github.com/singapore9

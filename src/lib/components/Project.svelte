@@ -17,12 +17,16 @@
 		</p>
 		<div class="techsContainer">
 			Technologies:
+<!--		TODO: technologies should be visibly separated-->
+<!--		TODO: technologies should be clickable. on click - filter projects with specified technology -->
 			<div class="techs">
 				{#each project.technologies as tech}
 					<div>{tech}</div>
 				{/each}
 			</div>
 		</div>
+<!--		TODO: keyWords should be visibly separated, not only with comma-->
+	<!--		TODO: keyWords should be clickable. on click - filter projects with specified keyWord -->
 		{#if project.keyWords.length > 0}
 			<div class="keyWordsContainer">
 				Keys:
@@ -39,6 +43,7 @@
 			<div class="button">Project url =></div>
 		</a>
 	{/if}
+<!--	TODO: background image for Project block, to visualise the project-->
 </div>
 
 <style>

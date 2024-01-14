@@ -11,6 +11,7 @@
 	<title>Andrei - Main page</title>
 </svelte:head>
 <main>
+<!--	TODO: add animation 'palm' does rotation throw 15 secs on the page-->
 	<h1>Hi!✋ <br /> I'm Andrei, Web-developer &<br /> problems solver</h1>
 	<h2>💻 👉 Poland, Warsaw</h2>
 	<div class="icons">
@@ -49,6 +50,7 @@
 				<FaUpwork />
 			</div>
 		</a>
+<!--	TODO: replace bot link with work-account link	-->
 		<a
 			href="{TelegramBotLink}"
 			aria-label="Telegram Bot"
