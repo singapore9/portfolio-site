@@ -1,3 +1,7 @@
 .svelte/**
+.svelte-kit/**
 static/**
 node_modules/**
+.gitignore
+.pre-commit-config.yaml
+README.md
