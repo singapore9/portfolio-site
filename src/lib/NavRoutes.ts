@@ -10,7 +10,7 @@ const routes = [
 	{
 		href: '/about',
 		label: 'About'
-	},
+	}
 ];
 
 export default routes;

@@ -1,5 +1,5 @@
 <script>
-	import {skillAreas, Skill, SkillArea} from '$lib/Skills';
+	import { skillAreas, Skill, SkillArea } from '$lib/Skills';
 </script>
 
 <svelte:head>
@@ -10,19 +10,20 @@
 	<main>
 		<h1>About</h1>
 		<p>
-			I am Andrei, web-developer in Poland.<br/>
-			The Bachelor of Computer Science, have commercial IT experience from 2016.<br/>
-			Most of this time I use Python (Django, FastAPI), but also did fun automations with VBA, C++, Arduino.<br/>
-<!--			[TODO links/descriptions of automations].-->
+			I am Andrei, web-developer in Poland.<br />
+			The Bachelor of Computer Science, have commercial IT experience from 2016.<br />
+			Most of this time I use Python (Django, FastAPI), but also did fun automations with VBA, C++, Arduino.<br
+			/>
+			<!--			[TODO links/descriptions of automations].-->
 
-			Since 2019 I'm a part of one big games-related company and my duties are connected with
-			work with high-loaded web-services + microservices and different bots (Telegram, Slack).
+			Since 2019 I'm a part of one big games-related company and my duties are connected with work
+			with high-loaded web-services + microservices and different bots (Telegram, Slack).
 		</p>
 		<h2>Skills</h2>
 		{#each skillAreas as skillAreaOrSkill}
 			<ul>
-				{#if skillAreaOrSkill instanceof Skill }
-					{@const skill=skillAreaOrSkill}
+				{#if skillAreaOrSkill instanceof Skill}
+					{@const skill = skillAreaOrSkill}
 					<li>
 						<h4>
 							{skill.name}:
@@ -35,8 +36,8 @@
 							{/each}
 						</div>
 					</li>
-				{:else if (skillAreaOrSkill instanceof SkillArea)}
-					{@const skillArea=skillAreaOrSkill}
+				{:else if skillAreaOrSkill instanceof SkillArea}
+					{@const skillArea = skillAreaOrSkill}
 					<li>
 						<h4>
 							{skillArea.name}:

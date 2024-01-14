@@ -206,32 +206,6 @@
 		visibility: hidden;
 	}
 
-	.cookieContainer {
-		background: white;
-		border-radius: 0px;
-		text-align: center;
-		width: 100%;
-		height: 30px;
-		color: black;
-		padding: 30px;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		position: fixed;
-		bottom: 0px;
-		left: 0;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.cookieContainer > p > a {
-		text-decoration: underline;
-	}
-
-	.cookieContainer > div {
-		cursor: pointer;
-	}
-
 	footer {
 		font-size: 16px;
 		font-weight: 400;
@@ -256,26 +230,6 @@
 	@media (min-width: 900px) {
 		:global(.tooltip) {
 			visibility: visible;
-		}
-	}
-	@media (min-width: 600px) {
-		.cookieContainer {
-			background: white;
-			border-radius: 50px;
-			text-align: center;
-			width: 350px;
-			height: 30px;
-			color: black;
-			padding: 0 10px;
-			display: flex;
-			justify-content: space-evenly;
-			align-items: center;
-			position: fixed;
-			bottom: 50px;
-			left: 0;
-			right: 0;
-			margin-left: auto;
-			margin-right: auto;
 		}
 	}
 </style>

@@ -16,11 +16,18 @@
 			anything you would like to see further, please feel free to contact me.
 		</p>
 		<p class="note">
-			Note 2: the other part of my projects aren't interesting enough, so they are located only at my GitHub page.
+			Note 2: the other part of my projects aren't interesting enough, so they are located only at
+			my GitHub page.
 		</p>
-		<p class="note">My GitHub account: <a target='_blank' style="color: white; text-decoration: underline;" href="{GitHubLink}">@{GitHubUsername}</a></p>
+		<p class="note">
+			My GitHub account: <a
+				target="_blank"
+				style="color: white; text-decoration: underline;"
+				href={GitHubLink}>@{GitHubUsername}</a
+			>
+		</p>
 
-<!--		TODO: should be something like a filter: for keyWords, technologies, etc-->
+		<!--		TODO: should be something like a filter: for keyWords, technologies, etc-->
 		{#each projects as project}
 			<ProjectComponent {project} />
 		{/each}
@@ -67,7 +74,6 @@
 		grid-template-columns: 1fr;
 		margin-bottom: 10px;
 	}
-
 
 	@media (min-width: 900px) {
 		.projectContainer {

@@ -2,7 +2,6 @@
 
 ## A personal portfolio website made using `@sveltejs/kit`.
 
-
 To view a demo example, **[click here](https://iamprofessional.dev/)**
 
 ## Features
@@ -39,8 +38,6 @@ $ npm install
 # Start the project in development
 $ npm run dev
 ```
-
-[//]: # (TODO: add linters on pre-commit)
 
 ## Authors ❤️
 

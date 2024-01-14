@@ -26,7 +26,6 @@ export class SkillArea {
 	}
 }
 
-
 export const skillAreas: (SkillArea | Skill)[] = [
 	new Skill({
 		name: 'Programming',

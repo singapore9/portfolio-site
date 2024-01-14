@@ -11,7 +11,7 @@
 	<title>Andrei - Main page</title>
 </svelte:head>
 <main>
-<!--	TODO: add animation 'palm' does rotation throw 15 secs on the page-->
+	<!--	TODO: add animation 'palm' does rotation throw 15 secs on the page-->
 	<h1>Hi!✋ <br /> I'm Andrei, Web-developer &<br /> problems solver</h1>
 	<h2>💻 👉 Poland, Warsaw</h2>
 	<div class="icons">
@@ -30,33 +30,18 @@
 			</div>
 		</div>
 
-		<a
-			href="{GitHubLink}"
-			aria-label="GitHub"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href={GitHubLink} aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 			<div class="icon">
 				<FaGithub />
 			</div>
 		</a>
-		<a
-			href="{UpWorkLink}"
-			aria-label="UpWork"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href={UpWorkLink} aria-label="UpWork" target="_blank" rel="noopener noreferrer">
 			<div class="icon">
 				<FaUpwork />
 			</div>
 		</a>
-<!--	TODO: replace bot link with work-account link	-->
-		<a
-			href="{TelegramBotLink}"
-			aria-label="Telegram Bot"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<!--	TODO: replace bot link with work-account link	-->
+		<a href={TelegramBotLink} aria-label="Telegram Bot" target="_blank" rel="noopener noreferrer">
 			<div class="icon">
 				<FaTelegramPlane />
 			</div>
