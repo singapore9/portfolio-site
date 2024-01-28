@@ -25,18 +25,19 @@
 				{/each}
 			</div>
 		</div>
+		<!-- 		TODO: move keyWords to project's page -->
 		<!--		TODO: keyWords should be visibly separated, not only with comma-->
 		<!--		TODO: keyWords should be clickable. on click - filter projects with specified keyWord -->
-		{#if project.keyWords.length > 0}
-			<div class="keyWordsContainer">
-				Keys:
-				<div class="keyWords">
-					{#each project.keyWords as keyWord}
-						<div>{keyWord}</div>
-					{/each}
-				</div>
-			</div>
-		{/if}
+		<!--{#if project.keyWords.length > 0}-->
+		<!--	<div class="keyWordsContainer">-->
+		<!--		Keys:-->
+		<!--		<div class="keyWords">-->
+		<!--			{#each project.keyWords as keyWord}-->
+		<!--				<div>{keyWord}</div>-->
+		<!--			{/each}-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--{/if}-->
 	</div>
 	{#if project.url}
 		<a href={project.url} target="_blank" rel="noreferrer">
@@ -90,20 +91,20 @@
 		}
 	}
 
-	.keyWordsContainer {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 10px;
-
-		.keyWords {
-			&:extend(.keyWordsContainer);
-			justify-content: space-between;
-			align-items: center;
-			div {
-				margin: 0 0 0 10px;
-			}
-		}
-	}
+	//.keyWordsContainer {
+	//	display: flex;
+	//	flex-wrap: wrap;
+	//	gap: 10px;
+	//
+	//	.keyWords {
+	//		&:extend(.keyWordsContainer);
+	//		justify-content: space-between;
+	//		align-items: center;
+	//		div {
+	//			margin: 0 0 0 10px;
+	//		}
+	//	}
+	//}
 
 	.button {
 		display: flex;
