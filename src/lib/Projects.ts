@@ -1,3 +1,9 @@
+import tvSurvey from '$lib/assets/projectIcon/tvSurvey.png';
+import projectGenerator from '$lib/assets/projectIcon/projectGenerator.png';
+import deliveryService from '$lib/assets/projectIcon/deliveryService.png';
+import urlShortener from '$lib/assets/projectIcon/urlShortener.png';
+import investorAggregator from '$lib/assets/projectIcon/investorAggregator.png';
+
 enum ProjectOwnershipType {
 	petProject = 'PET',
 	commercial = 'COMMERCIAL'
@@ -46,6 +52,7 @@ export class Project {
 	contribution: string;
 	ownershipType: ProjectOwnershipType;
 	url: string | null;
+	icon: string | null;
 
 	constructor(obj: {
 		name: string;
@@ -55,6 +62,7 @@ export class Project {
 		ownershipType: ProjectOwnershipType;
 		keyWords: ProjectKeyWordEnum[];
 		contribution: string;
+		icon: string | null;
 	}) {
 		this.name = obj.name;
 		this.technologies = obj.technologies;
@@ -63,6 +71,7 @@ export class Project {
 		this.ownershipType = obj.ownershipType;
 		this.keyWords = obj.keyWords;
 		this.contribution = obj.contribution;
+		this.icon = obj.icon;
 	}
 }
 
@@ -81,7 +90,8 @@ const projects: Project[] = [
 			'adds Poetry + FastAPI + Docker base setup',
 		url: 'https://github.com/singapore9/projects-generator',
 		ownershipType: ProjectOwnershipType.petProject,
-		contribution: 'full project implementation'
+		contribution: 'full project implementation',
+		icon: projectGenerator
 	}),
 	new Project({
 		name: 'TV surveys for consumers',
@@ -95,7 +105,8 @@ const projects: Project[] = [
 			"Surveys about TV programs for consumers. To get more info about consumers' interests.",
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
-		contribution: 'bugs fixing'
+		contribution: 'bugs fixing',
+		icon: tvSurvey
 	}),
 	new Project({
 		name: "Orders' delivery system",
@@ -112,7 +123,8 @@ const projects: Project[] = [
 		],
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
-		contribution: 'bugs fixing, tests coverage increasing'
+		contribution: 'bugs fixing, tests coverage increasing',
+		icon: deliveryService
 	}),
 	new Project({
 		name: 'URLs shortener',
@@ -122,7 +134,8 @@ const projects: Project[] = [
 		keyWords: [ProjectKeyWordEnum.fullImplementation],
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
-		contribution: 'full service implementation'
+		contribution: 'full service implementation',
+		icon: urlShortener
 	}),
 	new Project({
 		name: 'Web as single entry-point for internal services',
@@ -137,7 +150,8 @@ const projects: Project[] = [
 		keyWords: [ProjectKeyWordEnum.externalApi],
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
-		contribution: 'maintenance, bugs fixing, new integrations and features implementing'
+		contribution: 'maintenance, bugs fixing, new integrations and features implementing',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: 'Workflow processes helper',
@@ -162,7 +176,8 @@ const projects: Project[] = [
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
 		contribution:
-			'maintenance, bugs fixing, refactoring, new features / checks / integrations implementing, tests coverage increasing, optimization, making the system more flexible for other teams'
+			'maintenance, bugs fixing, refactoring, new features / checks / integrations implementing, tests coverage increasing, optimization, making the system more flexible for other teams',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: 'Data Pipeline service',
@@ -182,7 +197,8 @@ const projects: Project[] = [
 		],
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
-		contribution: 'full service implementation, bugs fixing, new integrations and sources adding'
+		contribution: 'full service implementation, bugs fixing, new integrations and sources adding',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: '11thestate.com | Platform for investors',
@@ -196,7 +212,8 @@ const projects: Project[] = [
 		keyWords: [],
 		url: 'https://11thestate.com/',
 		ownershipType: ProjectOwnershipType.commercial,
-		contribution: 'improvements, bugs fixing, new features delivering'
+		contribution: 'improvements, bugs fixing, new features delivering',
+		icon: investorAggregator
 	}),
 	// company 5.
 	// System for lawyers/customers
@@ -222,7 +239,8 @@ const projects: Project[] = [
 		url: 'https://retrievables.com/',
 		ownershipType: ProjectOwnershipType.commercial,
 		contribution:
-			'improvements, bugs fixing, new features delivering, integration with domain-related stores'
+			'improvements, bugs fixing, new features delivering, integration with domain-related stores',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: 'Robotic Arm',
@@ -238,7 +256,8 @@ const projects: Project[] = [
 		],
 		url: null,
 		ownershipType: ProjectOwnershipType.petProject,
-		contribution: 'full project implementation'
+		contribution: 'full project implementation',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: 'Telegram Bot for keeping chats clear',
@@ -255,7 +274,8 @@ const projects: Project[] = [
 		],
 		url: 'https://github.com/singapore9/anti-spam-bot',
 		ownershipType: ProjectOwnershipType.commercial,
-		contribution: 'full project implementation'
+		contribution: 'full project implementation',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: 'Telegram Bot for sport activities',
@@ -276,7 +296,8 @@ const projects: Project[] = [
 		],
 		url: 'https://github.com/singapore9/sport-progress-bot',
 		ownershipType: ProjectOwnershipType.petProject,
-		contribution: 'full project implementation'
+		contribution: 'full project implementation',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: 'MVP of Trello competitor',
@@ -297,7 +318,8 @@ const projects: Project[] = [
 		],
 		url: null,
 		ownershipType: ProjectOwnershipType.petProject,
-		contribution: 'full project implementation'
+		contribution: 'full project implementation',
+		icon: null // TODO: add icon
 	}),
 	new Project({
 		name: 'MVP of Trello competitor',
@@ -318,7 +340,8 @@ const projects: Project[] = [
 		],
 		url: null,
 		ownershipType: ProjectOwnershipType.petProject,
-		contribution: 'full project implementation'
+		contribution: 'full project implementation',
+		icon: null // TODO: add icon
 	})
 ];
 
