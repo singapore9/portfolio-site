@@ -49,6 +49,7 @@ export class Project {
 	technologies: ProjectTechnologyEnum[];
 	keyWords: (string | ProjectKeyWordEnum)[];
 	description: string;
+	sumDescription: string;
 	contribution: string;
 	ownershipType: ProjectOwnershipType;
 	url: string | null;
@@ -58,6 +59,7 @@ export class Project {
 		name: string;
 		technologies: ProjectTechnologyEnum[];
 		description: string;
+		sumDescription: string;
 		url: string | null;
 		ownershipType: ProjectOwnershipType;
 		keyWords: ProjectKeyWordEnum[];
@@ -67,6 +69,7 @@ export class Project {
 		this.name = obj.name;
 		this.technologies = obj.technologies;
 		this.description = obj.description;
+		this.sumDescription = obj.sumDescription;
 		this.url = obj.url;
 		this.ownershipType = obj.ownershipType;
 		this.keyWords = obj.keyWords;
@@ -88,6 +91,7 @@ const projects: Project[] = [
 		description:
 			"It solves annoying problem with manual project's initialization: creates repo in GitHub, " +
 			'adds Poetry + FastAPI + Docker base setup',
+		sumDescription: "It solves annoying problem with manual project's initialization",
 		url: 'https://github.com/singapore9/projects-generator',
 		ownershipType: ProjectOwnershipType.petProject,
 		contribution: 'full project implementation',
@@ -103,6 +107,8 @@ const projects: Project[] = [
 		keyWords: [ProjectKeyWordEnum.tvApi],
 		description:
 			"Surveys about TV programs for consumers. To get more info about consumers' interests.",
+		sumDescription:
+			"Surveys about TV programs for consumers. To get more info about consumers' interests.",
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
 		contribution: 'bugs fixing',
@@ -115,6 +121,7 @@ const projects: Project[] = [
 			"The system is so-called as 'Uber for things/orders'. " +
 			'Was implemented when taxi applications became popular. ' +
 			"System can combine few orders for delivery to make more profit of driver's path",
+		sumDescription: "So-called as 'Uber for things/orders'",
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.OsmApi,
@@ -131,6 +138,7 @@ const projects: Project[] = [
 		technologies: [ProjectTechnologyEnum.django],
 		description:
 			"It's more cool to have service-related short url than 'bit.ly/...' or other wide-spread service's url",
+		sumDescription: "Service-related short url than 'bit.ly/...'",
 		keyWords: [ProjectKeyWordEnum.fullImplementation],
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
@@ -147,6 +155,7 @@ const projects: Project[] = [
 		description:
 			'User can get result by 1-2 clicks on this system instead of clicking ' +
 			'on few pages and waiting result from this pages.',
+		sumDescription: 'User can get result by 1-2 clicks',
 		keyWords: [ProjectKeyWordEnum.externalApi],
 		url: null,
 		ownershipType: ProjectOwnershipType.commercial,
@@ -167,6 +176,7 @@ const projects: Project[] = [
 			'"who should do review of merge-request (with knowing about employees vacations)?", ' +
 			'"does Jira issue have full info for specified status", ' +
 			'"has specific user permission for making some actions/transitions"?',
+		sumDescription: "Company's scrum master and processes optimizer",
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.atlassianApi,
@@ -189,6 +199,8 @@ const projects: Project[] = [
 		description:
 			'Tool for making data-pipeline (extract / transform / aggregate) with different sources and Google BigQuery as destination. ' +
 			"It also has optimization and mongo as cache for decreasing amount of requests to Google's service.",
+		sumDescription:
+			'Extract / transform / aggregate different sources to Google BigQuery as destination',
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.GoogleBigQueryApi,
@@ -209,6 +221,7 @@ const projects: Project[] = [
 		],
 		description:
 			'Platform for communication between non-professional investors to accumulate their feedback and connect them with lawyers for work against business-owners',
+		sumDescription: 'Accumulate investors feedback and connect them with lawyers',
 		keyWords: [],
 		url: 'https://11thestate.com/',
 		ownershipType: ProjectOwnershipType.commercial,
@@ -230,6 +243,7 @@ const projects: Project[] = [
 			ProjectTechnologyEnum.celery
 		],
 		description: 'Links customers with lawyers who can collect their debtors money',
+		sumDescription: 'Lawyers who can collect your debtors money',
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.clioApi,
@@ -248,6 +262,7 @@ const projects: Project[] = [
 		description:
 			'Robotic arm with 2 stepper motors, which must be able to get to specified points of ' +
 			'the circle and do paint. 1st motor - rotates arm, 2nd motor - changes radius of circle.',
+		sumDescription: 'Robotic arm with 2 stepper motors',
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.GoogleBigQueryApi,
@@ -267,6 +282,7 @@ const projects: Project[] = [
 			ProjectTechnologyEnum.asyncio
 		],
 		description: 'Block users by Name/Surname patterns, by message patterns',
+		sumDescription: 'Smart bot who blocks spam-accounts by pattern',
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.telegramBotApi,
@@ -288,6 +304,8 @@ const projects: Project[] = [
 		description:
 			'Having statistic and history of exercise is one of ingredients for being motivated. ' +
 			'The project has 3 parts: telegram-bot as data input, web-page as data presenter and back-end as data handler.',
+		sumDescription:
+			'The project has 3 parts to track your progress: telegram-bot, web-page and back-end.',
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.telegramBotApi,
@@ -311,28 +329,7 @@ const projects: Project[] = [
 		description:
 			"MVP of Trello-like system: Cards, relations, 'due to' and other relations. " +
 			'Not the easiest project to try more build- and deploy-related activities by myself',
-		keyWords: [
-			ProjectKeyWordEnum.externalApi,
-			ProjectKeyWordEnum.fullImplementation,
-			ProjectKeyWordEnum.awsEc2
-		],
-		url: null,
-		ownershipType: ProjectOwnershipType.petProject,
-		contribution: 'full project implementation',
-		icon: null // TODO: add icon
-	}),
-	new Project({
-		name: 'MVP of Trello competitor',
-		technologies: [
-			ProjectTechnologyEnum.python,
-			ProjectTechnologyEnum.django,
-			ProjectTechnologyEnum.drf,
-			ProjectTechnologyEnum.djangoFilters,
-			ProjectTechnologyEnum.swaggerOpenapi
-		],
-		description:
-			"MVP of Trello-like system: Cards, relations, 'due to' and other relations. " +
-			'Not the easiest project to try more build- and deploy-related activities by myself',
+		sumDescription: 'Just wanted to try build- / deploy-related activities',
 		keyWords: [
 			ProjectKeyWordEnum.externalApi,
 			ProjectKeyWordEnum.fullImplementation,

@@ -1,15 +1,15 @@
 <script>
 	import projects from '$lib/Projects';
 	import { GitHubUsername, GitHubLink } from '$lib/Constants';
-	import ProjectComponent from '$lib/components/Project.svelte';
+	import ProjectSummaryComponent from '$lib/components/ProjectSummary.svelte';
 </script>
 
 <svelte:head>
 	<title>Andrei | Projects</title>
 </svelte:head>
 
-<div class="projectContainer">
-	<div class="projects">
+<div class="projectsPage">
+	<div class="pageSummary">
 		<h1>Projects</h1>
 		<p class="note">
 			Note: part of my projects are under NDA so I am unable to share those projects. If there is
@@ -20,22 +20,22 @@
 			my GitHub page.
 		</p>
 		<p class="note">
-			My GitHub account: <a
-				target="_blank"
-				style="color: white; text-decoration: underline;"
-				href={GitHubLink}>@{GitHubUsername}</a
-			>
+			My GitHub account: <a target="_blank" href={GitHubLink}>@{GitHubUsername}</a>
 		</p>
 
-		<!--		TODO: should be something like a filter: for keyWords, technologies, etc-->
-		{#each projects as project}
-			<ProjectComponent {project} />
-		{/each}
+		<div class="projectList">
+			<!--		TODO: should be something like a filter: for keyWords, technologies, etc-->
+			{#each projects as project}
+				<div class="projectWrapper">
+					<ProjectSummaryComponent {project} />
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>
 
-<style>
-	.projectContainer {
+<style lang="less">
+	.projectsPage {
 		width: 100%;
 		max-width: 900px;
 		display: flex;
@@ -44,54 +44,52 @@
 		text-align: center;
 		padding: 1em;
 		margin: 0 auto;
-		text-align: center;
-	}
 
-	.note {
-		opacity: 0.5;
-		margin: 0;
-		max-width: 900px;
-		text-align: left;
-	}
-
-	.projectContainer .projects {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap: 40px;
-		margin-top: 30px;
-	}
-
-	h1 {
-		font-weight: 700;
-		text-align: start;
-	}
-
-	.projects {
-		width: 100%;
-		margin: 50px auto;
-		display: grid;
-		grid-gap: 1rem;
-		grid-template-columns: 1fr;
-		margin-bottom: 10px;
-	}
-
-	@media (min-width: 900px) {
-		.projectContainer {
-			padding: 0;
-		}
-		.projects > h1 {
-			font-size: 48px;
-			margin: 50px 0 0 0;
-		}
-
-		.projects {
+		.pageSummary {
+			display: grid;
 			grid-template-columns: 1fr;
+			grid-gap: 40px;
+			margin-top: 30px;
+			width: 100%;
+			margin-bottom: 10px;
+
+			h1 {
+				font-weight: 700;
+				text-align: start;
+			}
+
+			.note {
+				opacity: 0.5;
+				margin: 0;
+				max-width: 900px;
+				text-align: left;
+				a {
+					color: white;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.projectList {
+			flex-flow: column wrap;
+			column-count: 3;
+
+			.projectWrapper {
+				width: 270px;
+				padding: 5px;
+			}
 		}
 	}
 
-	@media (min-width: 600px) {
-		.projects {
-			grid-template-columns: 1fr;
+	@media (max-width: 900px) {
+		.projectsPage {
+			.projectList {
+				column-count: 1;
+
+				.projectWrapper {
+					width: 100%;
+				}
+			}
 		}
 	}
 </style>
