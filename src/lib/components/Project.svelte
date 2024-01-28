@@ -46,7 +46,7 @@
 	<!--	TODO: background image for Project block, to visualise the project-->
 </div>
 
-<style>
+<style lang="less">
 	a {
 		text-decoration: none;
 	}
@@ -65,44 +65,44 @@
 		background: #111;
 		padding: 2rem;
 		width: 100%;
-		border-radius: 5px;
 		transition: transform 0.2s ease-in-out;
 		border-radius: 25px;
-	}
 
-	.project p {
-		font-weight: 100;
-		color: #708090;
+		p {
+			font-weight: 100;
+			color: #708090;
+		}
 	}
 
 	.techsContainer {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px;
-	}
 
-	.techs {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.techs > div {
-		margin: 0 0 0 10px;
+		.techs {
+			&:extend(.techsContainer);
+			justify-content: space-between;
+			align-items: center;
+
+			div {
+				margin: 0 0 0 10px;
+			}
+		}
 	}
 
 	.keyWordsContainer {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px;
-	}
 
-	.keyWords {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.keyWords > div {
-		margin: 0 0 0 10px;
+		.keyWords {
+			&:extend(.keyWordsContainer);
+			justify-content: space-between;
+			align-items: center;
+			div {
+				margin: 0 0 0 10px;
+			}
+		}
 	}
 
 	.button {
