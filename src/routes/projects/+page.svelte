@@ -25,8 +25,8 @@
 
 		<div class="projectList">
 			<!--		TODO: should be something like a filter: for keyWords, technologies, etc-->
-			{#each projects as project}
-				<div class="projectWrapper">
+			{#each projects as project, index}
+				<div class="projectWrapper div{index + 1}">
 					<ProjectSummaryComponent {project} />
 				</div>
 			{/each}
@@ -71,12 +71,49 @@
 		}
 
 		.projectList {
-			flex-flow: column wrap;
-			column-count: 3;
+			display: grid;
+			grid-template-columns: repeat(9, 1fr);
+			grid-template-rows: repeat(9, 1fr);
+			grid-gap: 20px;
 
-			.projectWrapper {
-				width: 270px;
-				padding: 5px;
+			.div1 {
+				grid-area: 1 / 1 / 2 / 10;
+			}
+			.div2 {
+				grid-area: 2 / 1 / 4 / 4;
+			}
+			.div3 {
+				grid-area: 2 / 4 / 3 / 10;
+			}
+			.div4 {
+				grid-area: 3 / 4 / 4 / 7;
+			}
+			.div5 {
+				grid-area: 3 / 7 / 5 / 10;
+			}
+			.div6 {
+				grid-area: 4 / 1 / 6 / 3;
+			}
+			.div7 {
+				grid-area: 4 / 3 / 6 / 7;
+			}
+			.div8 {
+				grid-area: 5 / 7 / 7 / 10;
+			}
+			.div9 {
+				grid-area: 6 / 1 / 7 / 7;
+			}
+			.div10 {
+				grid-area: 7 / 1 / 9 / 5;
+			}
+			.div11 {
+				grid-area: 7 / 5 / 8 / 10;
+			}
+			.div12 {
+				grid-area: 8 / 5 / 9 / 10;
+			}
+			.div13 {
+				grid-area: 9 / 1 / 10 / 10;
 			}
 		}
 	}
@@ -84,7 +121,8 @@
 	@media (max-width: 900px) {
 		.projectsPage {
 			.projectList {
-				column-count: 1;
+				display: flex;
+				flex-direction: column;
 
 				.projectWrapper {
 					width: 100%;
